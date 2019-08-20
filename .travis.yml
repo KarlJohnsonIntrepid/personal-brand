@@ -1,18 +1,19 @@
 language: node_js
 node_js:
-  - "8"
-
+- '8'
 cache:
   directories:
-    - "node_modules"
-
+  - node_modules
 branches:
   only:
   - master
-
 install:
-  - npm install
-  - npm run generate
-
+- npm install
+- npm run generate
 script:
-  - echo "Skipping tests"
+- echo "Skipping tests"
+deploy:
+  provider: firebase
+  token:
+    secure: JoyZvH3C6KrYwsQyKiRdslQvY84vU3sXYkn0qwkK/ehjOUPuvo/wpoF6rdhT2Gk16ezFg/YTqfFvU8GxNfI6hdc2tZrP3lHk3DKjRgrxrL1uytU/yqJ8sUwE1lPSgfVSBO4cLfJgqlF4hXaKH2n4DRnNCMLymaXkJqnyq+MtGQ1MjQV1alCbBN8+dLuaORm7OIV6g3TfX9fAPb62PT42LwOuB8biO3PMZH4hQLkDXOaWrUODS4JTo+QfDL1nVhfnBW3wU25bDFQDZGz2Ak0R1IjuvxvOS5OQjAkkgf029whc9gLJ5N2LnZB3f0j6fs1OpM69BHtZuU1T8qtdiNeastDSsOCNQli3xeDiu7Hrza6o0Pwiijr2lHcfulOhazGJ8cstdbSQL3S9VFpeDfw/c8dsIG2X0fKx0VzYkRXkaMYLPoVjRf0gu4SPWPWoz6x/lVeh594r7u2qF5yzIG8ZWEp0/aMeRi6sQc/zFB51bNAhqA4hz/8WHevJNLyqqF4zXmcL1TVUk46HPXgUoTIzQjPMfj3W6iy/ph9KXTGRvQrNCh1JI5Sk1oTntDQbIjYJ384MM1BjNSIh8lK1+7ozpPaRT9Tz6dIDnRuMi5mVlYN0UcxEw96anSn65VvrwSmGWzilnHzMVBy63MfMqRiy/i2LIBAdWUz9CJ/LqXJKi/4=
+  message: "deployed to firebase"
