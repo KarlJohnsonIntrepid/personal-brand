@@ -22,7 +22,7 @@
         </a>
         and
         <a href="http://bulma.io/">
-          Bulma
+          Bulma Love Karl
         </a>
       </card>
 
